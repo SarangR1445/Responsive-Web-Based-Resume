@@ -1,0 +1,217 @@
+/* Keyframes for fade-in and slide-up effect */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Body Background */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(120deg, #e0f7fa, #f1f8e9);
+    color: #333;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Resume Container */
+.main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    animation: fadeInUp 1.5s ease-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Header Section */
+.intro h1 {
+    font-size: 2.7em;
+    color: #00695c;
+    margin-bottom: 5px;
+    animation: fadeInUp 1.6s ease-out;
+}
+
+.intro h2 {
+    font-size: 1.5em;
+    color: #004d40;
+    margin-top: 0;
+    animation: fadeInUp 1.8s ease-out;
+}
+
+/* Section Headings */
+h3 {
+    font-size: 1.4em;
+    color: #00695c;
+    margin-top: 30px;
+    border-bottom: 2px solid #b2dfdb;
+    padding-bottom: 5px;
+    animation: fadeInUp 2s ease-out;
+}
+
+/* Contact and Links */
+.contact h4 {
+    font-weight: normal;
+    margin: 4px 0;
+    transition: color 0.3s ease;
+}
+
+.contact h4:hover {
+    color: #004d40;
+}
+
+.contact a {
+    color: #00796b;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.contact a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #004d40;
+    left: 0;
+    bottom: -2px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: right;
+}
+
+.contact a:hover {
+    color: #004d40;
+}
+
+.contact a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Table Styling */
+table.edu {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 0.95em;
+}
+
+table.edu th,
+table.edu td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+table.edu tr:nth-child(even) {
+    background-color: #f1f8e9;
+}
+
+table.edu tr:hover {
+    background-color: #e0f2f1;
+}
+
+table.edu tr:first-child {
+    background-color: #b2dfdb;
+    font-weight: bold;
+}
+
+/* Lists Styling */
+ul li {
+    margin-bottom: 6px;
+    transition: transform 0.2s ease;
+}
+
+ul li:hover {
+    transform: translateX(5px);
+}
+
+/* Project Links & Certifications */
+.project a,
+.certifications a {
+    color: #00897b;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.project a::after,
+.certifications a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #004d40;
+    left: 0;
+    bottom: -2px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: right;
+}
+
+.project a:hover,
+.certifications a:hover {
+    color: #004d40;
+}
+
+.project a:hover::after,
+.certifications a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Description Definitions */
+dl dt {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #004d40;
+}
+
+dl dd {
+    margin-left: 20px;
+    font-size: 0.95em;
+    transition: color 0.3s ease;
+}
+
+dl dd:hover {
+    color: #555;
+}
+
+/* Divider Line */
+hr {
+    border: none;
+    border-top: 1px solid #cfd8dc;
+    margin: 15px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    table.edu td,
+    table.edu th {
+        font-size: 0.85em;
+    }
+}
