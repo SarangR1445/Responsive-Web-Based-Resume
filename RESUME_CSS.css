@@ -215,3 +215,77 @@ hr {
         font-size: 0.85em;
     }
 }
+
+/* Keyframes for animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Experience Card Styling */
+.experience-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    animation: fadeInUp 1.6s ease-out;
+    transition: transform 0.3s ease;
+}
+/* Heading */
+.experience-card h3 {
+    font-size: 1.2em;
+    color: #00695c;
+    animation: fadeInUp 1.7s ease-out;
+}
+/* Role Title */
+.experience-card h2 {
+    font-size: 1.4em;
+    color: #00695c;
+    font-weight: bold;
+    animation: fadeInUp 1.8s ease-out;
+}
+/* Paragraph */
+.experience-card p {
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: #444;
+    margin-left: 20px;
+    animation: fadeInUp 2s ease-out;
+}
+.slider {
+    width: 150px;
+    accent-color: #4CAF50;
+    opacity: 0.7;
+}
+.career-objective {
+    margin-top: 30px;
+    animation: fadeInUp 1.9s ease-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Divider */
+.experience-card hr {
+    border: none;
+    border-top: 1px solid #b2dfdb;
+    margin: 10px 0 15px;
+}
+.career-objective >h3 {
+    font-size: 1.4em;
+    color: #00695c;
+    border-bottom: 2px solid #b2dfdb;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    animation: fadeInUp 2s ease-out;
+}
+
+.career-objective p {
+    font-size: 0.97em;
+    line-height: 1.6;
+    color: #444;
+    animation: fadeInUp 2.1s ease-out;
+}
