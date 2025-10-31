@@ -14,9 +14,11 @@
 * {
   box-sizing: border-box;
 }
+
 html, body {
   height: 100%;
 }
+
 body {
   margin: 0;
   background: linear-gradient(180deg, #031026 0%, #061025 100%);
@@ -362,7 +364,7 @@ main {
   color: var(--muted);
 }
 
-/* Contact Form */
+/* Contact Form (kept for safety: removed visual form rules already) */
 .contact-form {
   display: grid;
   gap: 10px;
@@ -426,69 +428,245 @@ footer {
   color: var(--muted);
 }
 
-/* Responsive */
+/* -------------------------
+   Responsive (improved)
+   ------------------------- */
+
+/* Base breakpoint for tablets & small desktops */
 @media (max-width: 1024px) {
+  :root {
+    --max-width: 920px;
+    --gap: 16px;
+  }
+
+  .bg-tech {
+    height: 360px;
+    background-size: cover;
+    background-position: center -30px;
+  }
+
   .hero {
     grid-template-columns: 1fr 300px;
-    gap: 20px;
   }
+
+  .profile-avatar {
+    width: 180px;
+    height: 220px;
+  }
+
   .education-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
-@media (max-width: 720px) {
+/* Tablets & large phones */
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 40px;
+  }
+
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 10px 15px;
+  }
+
+  /* Make nav toggle visible and collapse links */
   #nav-toggle {
-    display: block;
+    display: inline-block;
+    cursor: pointer;
   }
   .nav-links {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 80vw;
-    max-width: 320px;
-    background: rgba(2, 6, 15, 0.97);
+    display: none;
     flex-direction: column;
-    padding: 72px 32px 32px 32px;
-    gap: 20px;
-    box-shadow: -2px 0 16px rgba(0,0,0,0.15);
-    transform: translateX(100%);
-    transition: transform 0.25s;
-    z-index: 99;
-    justify-content: flex-start;
-    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+    padding: 10px 0;
   }
   .nav-links.open {
-    transform: translateX(0);
+    display: flex;
+  }
+  .nav-links li {
+    width: 100%;
   }
   .nav-links a {
-    padding: 18px 0;
-    font-size: 1.08rem;
-    color: #e6eef6;
+    display: block;
     width: 100%;
-    border-radius: 8px;
-    transition: background 0.2s;
+    padding: 10px 12px;
   }
-  .nav-links a:hover {
-    background: rgba(0,204,255,0.09);
-    color: var(--accent);
+
+  /* Adjust maximum width and gap for mobile */
+  :root {
+    --max-width: 100%;
+    --gap: 12px;
   }
-  .hero,
-  .projects-grid,
-  .education-grid,
-  .skills-grid {
+
+  main {
+    padding: 0 14px;
+  }
+
+  /* Stack hero content */
+  .hero {
     grid-template-columns: 1fr;
+    text-align: left;
     gap: 16px;
   }
-  .profile-card {
-    order: -1;
+
+  .hero-right {
+    display: flex;
+    justify-content: center;
+  }
+
+  .profile-avatar {
+    width: 160px;
+    height: 200px;
+  }
+
+  /* Stack grids to single column for readability */
+  .skills-grid,
+  .education-grid,
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Reduce paddings for cards */
+  .card {
+    padding: 16px;
+  }
+
+  /* Reduce heading sizes */
+  h1, h2, h3 {
+    font-size: 1.25rem;
+  }
+
+  p, li {
+    font-size: 0.95rem;
+  }
+
+  /* Contact inline wrap */
+  .contact-inline {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  /* Button block on smaller widths for tap targets */
+  .btn {
+    display: inline-block;
+    min-width: 120px;
+    padding: 10px 12px;
+  }
+
+  /* Hide hover-dependent heavy shadows */
+  .skill-col:hover {
+    transform: none;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.35);
   }
 }
 
+/* Small phones */
+@media (max-width: 480px) {
+  body {
+    padding: 0 10px;
+  }
+
+  .topbar {
+    padding: 8px 10px;
+  }
+
+  .logo-mark {
+    width: 44px;
+    height: 44px;
+    font-size: 12px;
+  }
+  .logo-text h1 { font-size: 0.95rem; }
+  .logo-text p { font-size: 0.72rem; }
+
+  .hero-left h2 {
+    font-size: 1.15rem;
+  }
+
+  .tagline {
+    font-size: 0.92rem;
+  }
+
+  /* Ensure hero stacks and centers nicely */
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .profile-avatar {
+    width: 140px;
+    height: 170px;
+  }
+
+  /* Buttons full width for easy tapping */
+  .btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 6px 0;
+  }
+
+  .btn.ghost {
+    padding: 10px;
+  }
+
+  .contact-inline {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .card {
+    padding: 12px;
+  }
+
+  p, li {
+    font-size: 0.9rem;
+  }
+}
+
+/* Very small phones (narrow) */
+@media (max-width: 360px) {
+  .profile-avatar {
+    width: 120px;
+    height: 150px;
+  }
+
+  .hero-left h2 {
+    font-size: 1.05rem;
+  }
+
+  .logo-mark {
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav-links a {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  .bg-tech {
+    height: 240px;
+    background-size: cover;
+    background-position: center -10px;
+  }
+}
