@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agricultural Threat Management Using AI — Project Details</title>
+  <link rel="stylesheet" href="project1.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="logo">
+      <div class="logo-mark">SR</div>
+      <div class="logo-text">
+        <h1>SARANG REWATKAR</h1>
+        <p class="role">IIOT Engineer • MERN Stack Enthusiast</p>
+      </div>
+    </div>
+  </header>
+  
+  <main class="fade-in">
+    <a href="index.html#projects" class="back-btn">← Back to Projects</a>
+    <div class="project-header">
+      <h1>Agricultural Threat Management Using AI</h1>
+      <p class="meta">Duration: July 2024 — June 2025</p>
+    </div>
+
+    <div class="project-section">
+      <h2>1. Crop Disease and Insect Detection Module (Jetson Nano with Flask Dashboard)</h2>
+      <h3>Working Description</h3>
+      <p>This module is powered by the NVIDIA Jetson Nano, a compact edge AI device capable of running deep learning models locally for real-time inference.</p>
+      <p>It is connected to a Raspberry Pi 8MP camera module that captures high-resolution images of crops.</p>
+      <p>A custom-trained YOLOv8 object detection model, optimized with TensorRT for Jetson Nano, detects 33 different classes of crop diseases and insect pests affecting crops like Blackgram, Cotton, and Soybean.</p>
+      <p>The model processes images locally on the Jetson Nano without requiring internet connectivity, enabling usage in remote farm areas.</p>
+      <p>Detection results (disease/insect type, confidence score, timestamp, and optional geolocation) are logged in CSV format for export and analysis.</p>
+      <p>The Jetson Nano runs a Flask-based web server that hosts a user-friendly dashboard accessible from any device on the local network.</p>
+      <p>The Flask web interface displays live camera feeds with detection bounding boxes and labels in real time.</p>
+      <p>It also provides functionalities to start/stop the inference, view recent detection data, and export logs in CSV/Excel format.</p>
+      <p>Cooling fans keep the Jetson Nano temperature optimized during continuous operation.</p>
+      <p>A USB WiFi adapter optionally facilitates local network connectivity for remote monitoring on smartphones or laptops.</p>
+
+      <h3>Components Used</h3>
+      <table>
+        <tr><th>Component</th><th>Description</th><th>Purpose</th></tr>
+        <tr><td>NVIDIA Jetson Nano</td><td>Edge AI development board</td><td>Runs AI models for real-time crop disease and pest detection</td></tr>
+        <tr><td>Raspberry Pi Camera</td><td>8MP camera module</td><td>Captures high-resolution images of crops</td></tr>
+        <tr><td>USB WiFi Adapter</td><td>WiFi connectivity module</td><td>Provides local network access for Flask dashboard</td></tr>
+        <tr><td>Cooling Fan</td><td>Cooling device</td><td>Prevents overheating of Jetson Nano</td></tr>
+        <tr><td>Power Adapter</td><td>5V 4A power supply</td><td>Powers Jetson Nano and peripherals</td></tr>
+      </table>
+
+      <h3>Workflow Summary</h3>
+      <ul>
+        <li>The Jetson Nano powers up and initializes all software modules and camera.</li>
+        <li>The Raspberry Pi camera captures the live video feed of the crops.</li>
+        <li>Images are processed through the optimized YOLOv8 model running locally.</li>
+        <li>Detected diseases and pest instances are highlighted on the live video feed shown on the Flask dashboard.</li>
+        <li>Each detection result is recorded with relevant details in a CSV log file.</li>
+        <li>Users can access the Flask web interface on devices connected to the same network, allowing easy real-time monitoring.</li>
+        <li>The CSV logs can be exported for offline analysis to track trends and outbreaks over time.</li>
+      </ul>
+    </div>
+
+    <div class="project-section">
+      <h2>2. Animal Intrusion Detection Module (ESP32-CAM with LoRa and Flask Dashboard)</h2>
+      <h3>Working Description</h3>
+      <p>An ESP32-CAM microcontroller equipped with an OV5640 5MP camera sensor captures images to detect wild animals in farm or forest areas.</p>
+      <p>A TinyML animal detection model trained on Edge Impulse runs locally on the ESP32-CAM to identify animals such as tigers, leopards, bears, and elephants.</p>
+      <p>On detection, the ESP32-CAM sends a unique animal code wirelessly using LoRa (Long Range) communication to a nearby ESP32 receiver microcontroller.</p>
+      <p>The receiver ESP32 collects detections and relays them to a Flask web server hosting a real-time animal intrusion dashboard.</p>
+      <p>The Flask web interface displays live detection alerts, showing animal type, timestamp, and location details.</p>
+      <p>The dashboard supports historical logging and can trigger audible or visual alerts to immediately inform the farmer.</p>
+      <p>This system operates independently of WiFi or cellular networks, making it ideal for remote agricultural fields.</p>
+
+      <h3>Components Used</h3>
+      <table>
+        <tr><th>Component</th><th>Description</th><th>Purpose</th></tr>
+        <tr><td>ESP32-CAM Module</td><td>Microcontroller with OV5640 5MP camera</td><td>Captures images and runs embedded animal detection model</td></tr>
+        <tr><td>LoRa Modules</td><td>Low power, long-range radio modules</td><td>Wireless transmission of animal detection data</td></tr>
+        <tr><td>ESP32 Microcontroller</td><td>ESP32 microcontroller on receiver side</td><td>Receives LoRa messages and communicates with Flask server</td></tr>
+        <tr><td>Flask Web Server</td><td>Python web framework</td><td>Hosts real-time animal detection dashboard</td></tr>
+        <tr><td>Power Adapter/USB Cable</td><td>Provides power supply</td><td>Powers ESP32-CAM and ESP32 receiver boards</td></tr>
+        <tr><td>Buzzer (optional)</td><td>Audible alert device</td><td>Produces alert sounds on detection</td></tr>
+      </table>
+
+      <h3>Workflow Summary</h3>
+      <ul>
+        <li>ESP32-CAM continuously captures images and performs local animal detection.</li>
+        <li>Detected animal type is transmitted as a code over LoRa to the receiver ESP32.</li>
+        <li>Receiver ESP32 sends received data to the Flask server on the local network.</li>
+        <li>The Flask dashboard updates instantly with detection alerts, visualizing animal type and event time.</li>
+        <li>The dashboard logs all detections for historical analysis and can trigger alert sounds or notifications.</li>
+        <li>Farmers monitor field animal activity conveniently through any network-connected device without needing internet.</li>
+      </ul>
+
+      <h3>System Benefits and Features</h3>
+      <ul>
+        <li><b>Edge AI Processing:</b> Both modules process data locally, reducing latency and eliminating reliance on internet connectivity.</li>
+        <li><b>User-Friendly Dashboards:</b> Flask web interfaces provide farmers real-time monitoring on simple devices.</li>
+        <li><b>Long-Range Communication:</b> LoRa enables animal intrusion alerts from remote and wide farmlands.</li>
+        <li><b>Data Logging:</b> Both systems save detection results in CSV format for trend analysis and reporting.</li>
+        <li><b>Low-Power Hardware:</b> ESP32-CAM and LoRa modules are optimized for energy efficiency.</li>
+        <li><b>Scalability:</b> More ESP32 units can be deployed across fields for distributed monitoring.</li>
+        <li><b>Real-Time Alerts:</b> Farmers receive immediate notifications to take timely protective actions.</li>
+      </ul>
+
+      <p class="summary">This integrated system offers a comprehensive solution for smart agricultural threat management by detecting crop threats and wild animal intrusions with edge computing, long-range communication, and intuitive web-based dashboards tailored for rural environments.</p>
+    </div>
+
+    <a href="index.html#projects" class="back-btn">← Back to Projects</a>
+  </main>
+</body>
+</html>

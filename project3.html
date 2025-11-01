@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weather API Project — Project Details</title>
+  <link rel="stylesheet" href="project3.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="logo">
+      <div class="logo-mark">SR</div>
+      <div class="logo-text">
+        <h1>SARANG REWATKAR</h1>
+        <p class="role">IIOT Engineer • MERN Stack Enthusiast</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="fade-in">
+    <a href="index.html#projects" class="back-btn">← Back to Projects</a>
+    <div class="project-header">
+      <h1>Weather API Project</h1>
+      <p class="meta">A Modern Weather Dashboard Web App</p>
+    </div>
+
+    <!-- Image Section -->
+    <div class="project-image">
+      <img src="./UI.png" alt="Weather Dashboard Preview">
+    </div>
+
+    <div class="project-section">
+      <p>A modern, responsive weather dashboard web app built with HTML, CSS, and JavaScript. It uses the OpenWeatherMap API to fetch and display real-time weather updates, including current conditions, hourly forecasts, and a 7-day outlook for any city worldwide.</p>
+
+      <h2>Features</h2>
+      <ul>
+        <li>Search for any city to get current weather and forecasts.</li>
+        <li>Dynamic background gradients that change based on the weather condition (sunny, rainy, cloudy, etc.).</li>
+        <li>Weather icons sourced directly from OpenWeather for accurate representation.</li>
+        <li>Responsive design with smooth animations for an enhanced user experience.</li>
+        <li>Clean, minimalist interface focusing solely on weather data.</li>
+        <li>Error handling for invalid city inputs or network/API failures.</li>
+      </ul>
+
+      <h2>Technologies Used</h2>
+      <ul>
+        <li>HTML5</li>
+        <li>CSS3 (flexbox, CSS grid, media queries, transitions)</li>
+        <li>JavaScript ES6 (fetch API, async/await, DOM manipulation)</li>
+        <li>OpenWeatherMap API for weather data and icons</li>
+      </ul>
+
+      <h2>Setup & Usage</h2>
+      <h3>Prerequisites</h3>
+      <ul>
+        <li>Modern web browser (Chrome, Firefox, Safari, Edge)</li>
+        <li>OpenWeatherMap API key (sign up for free at <a href="https://openweathermap.org/api" target="_blank">https://openweathermap.org/api</a>)</li>
+      </ul>
+
+      <h3>Installation</h3>
+      <pre><code>git clone https://github.com/your-username/weather-dashboard.git
+cd weather-dashboard
+      </code></pre>
+      <p>Open <b>script.js</b> and replace the placeholder API key with your OpenWeatherMap API key:</p>
+      <pre><code>const apiKey = "YOUR_OPENWEATHER_API_KEY";</code></pre>
+      <p>Open <b>index.html</b> in your browser to start using the weather dashboard.</p>
+
+      <h2>Responsiveness</h2>
+      <p>Includes media queries to provide an optimized experience on phones, tablets, and desktops.</p>
+      <p>Forecast sections wrap and resize for smaller screens.</p>
+      <p>Input and button sizes adjust for usability on touch devices.</p>
+
+      <h2>Customization</h2>
+      <p>Easily adjust background colors or add image backgrounds in the <b>bgThemes</b> object in <b>script.js</b>.</p>
+      <p>Modify CSS animations and styling by editing <b>style.css</b>.</p>
+    </div>
+
+    <a href="index.html#projects" class="back-btn">← Back to Projects</a>
+  </main>
+</body>
+</html>

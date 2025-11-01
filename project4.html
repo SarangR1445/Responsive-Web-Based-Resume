@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>4-Way Smart Traffic System using STM32 Microcontroller — Project Details</title>
+  <link rel="stylesheet" href="project4.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="logo">
+      <div class="logo-mark">SR</div>
+      <div class="logo-text">
+        <h1>SARANG REWATKAR</h1>
+        <p class="role">IIOT Engineer • MERN Stack Enthusiast</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="fade-in">
+    <a href="index.html#projects" class="back-btn">← Back to Projects</a>
+    <div class="project-header">
+      <h1>4-Way Smart Traffic System using STM32 Microcontroller</h1>
+      <p class="meta">An Embedded Systems Based Traffic Control Project</p>
+    </div>
+
+    <div class="project-section">
+      <p>This project implements a traffic light control system for a four-way intersection with integrated seven-segment display counting. It is designed to manage vehicle flow effectively by controlling traffic signals and providing digital countdown timers on each signal using seven-segment displays.</p>
+
+      <h2>Project Overview</h2>
+      <p>The system controls traffic lights at a four-way intersection in a timed sequence with red, yellow, and green signals for each direction. Along with the traffic lights, seven-segment displays show a countdown timer for signal change, helping drivers anticipate the next signal phase.</p>
+      <p>The project is developed using microcontroller programming with GPIO pin control and delay functions to manage the timing and sequencing of signals.</p>
+
+      <h2>Key Features</h2>
+      <ul>
+        <li>Time-sequenced control of red, yellow, and green lights for each of the four directions.</li>
+        <li>Seven-segment displays to show the countdown for 9 to 0 seconds.</li>
+        <li>Use of GPIO pin programming for signal control.</li>
+        <li>Efficient traffic flow management at the intersection.</li>
+        <li>Visual countdown for better driver awareness and safety.</li>
+      </ul>
+
+      <h2>Working</h2>
+      <p>Each direction receives a green, yellow, and red signal in a fixed time sequence controlled by the microcontroller.</p>
+      <p>Digital countdown displayed on seven-segment displays counts down from 9 to 0 seconds.</p>
+      <p>Delays between signal changes are implemented using delay functions in code.</p>
+      <p>GPIO pins are toggled HIGH or LOW to turn ON/OFF LEDs representing traffic lights and seven-segment display segments.</p>
+
+      <h2>System Components</h2>
+      <ul>
+        <li>Microcontroller (such as STM32 or Arduino)</li>
+        <li>LEDs for traffic lights (Red, Yellow, Green)</li>
+        <li>Seven-segment displays (for countdown)</li>
+        <li>Resistors, connecting wires, and power supply</li>
+        <li>GPIO interface for controlling lights and displays</li>
+      </ul>
+
+      <h2>Applications</h2>
+      <ul>
+        <li>Traffic management in urban road intersections.</li>
+        <li>Educational and demonstration projects for embedded systems and microcontroller programming.</li>
+        <li>Automation of traffic signals in smart cities.</li>
+      </ul>
+
+      <h2>Future Scope</h2>
+      <ul>
+        <li>Implementation of sensor-based adaptive traffic control.</li>
+        <li>Integration with vehicle detection for intelligent signal timing.</li>
+        <li>Remote monitoring and control using IoT.</li>
+        <li>Addition of pedestrian signals and countdown.</li>
+        <li>Expansion to multi-intersection coordinated control systems.</li>
+      </ul>
+    </div>
+
+    <a href="index.html#projects" class="back-btn">← Back to Projects</a>
+  </main>
+</body>
+</html>

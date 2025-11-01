@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IoT Based Pet Feeder — Project Details</title>
+  <link rel="stylesheet" href="project5.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="logo">
+      <div class="logo-mark">SR</div>
+      <div class="logo-text">
+        <h1>SARANG REWATKAR</h1>
+        <p class="role">IIOT Engineer • MERN Stack Enthusiast</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="fade-in">
+    <a href="index.html#projects" class="back-btn">← Back to Projects</a>
+    <div class="project-header">
+      <h1>IoT Based Pet Feeder</h1>
+      <p class="meta">Smart Automated Feeding System Using ESP32 and Blynk IoT</p>
+    </div>
+
+    <div class="project-section">
+      <p>The IoT-based pet feeder is a smart automated feeding system that allows pet owners to feed their pets remotely and on schedule via a mobile app controlled by Blynk IoT platform. Below is a detailed description of the working, components used, and how the system operates:</p>
+
+      <h2>Detailed Description</h2>
+      <h3>Working Principle</h3>
+      <p>The pet feeder consists of a wooden stand on which a food container is fixed.</p>
+      <p>A servo motor is attached to the wooden stand, which acts as a lid opener for the food container.</p>
+      <p>Below the food container, there is a food tray where the pet can eat the dispensed food.</p>
+      <p>The servo motor rotates to open or close the lid of the food container, controlling the release of food into the tray.</p>
+      <p>The servo motor is connected to an ESP32 microcontroller that controls its operation.</p>
+      <p>The ESP32 is programmed to communicate with the Blynk IoT platform, enabling the user to remotely control the servo motor via the Blynk mobile app.</p>
+      <p>Features include scheduled feeding times, allowing users to set specific times for automatic feeding.</p>
+      <p>Portion control is maintained by controlling the servo motor’s rotation duration or angle, ensuring consistent food amounts.</p>
+      <p>Real-time notifications via the Blynk app keep the owner informed about feeding status or any malfunctions.</p>
+      <p>The overall system enhances convenience, ensuring pets are fed on time even in the owner's absence, while prioritizing the pet's well-being.</p>
+
+      <h2>Components Used</h2>
+      <table>
+        <tr><th>Component</th><th>Description</th><th>Role in System</th></tr>
+        <tr><td>ESP32 Microcontroller</td><td>WiFi-enabled microcontroller with multiple GPIOs and communication protocols</td><td>Main controller managing servo motor operation and IoT control</td></tr>
+        <tr><td>Servo Motor</td><td>Small motor capable of precise angular rotation</td><td>Operates as lid opener to release food portion</td></tr>
+        <tr><td>Wooden Stand</td><td>Physical structure for mounting food container and servo motor</td><td>Structural support and positioning of components</td></tr>
+        <tr><td>Food Container</td><td>Container to store pet food</td><td>Holds dry food securely</td></tr>
+        <tr><td>Food Tray</td><td>Tray placed below container for dispensing food to the pet</td><td>Holds the dispensed food for pet feeding</td></tr>
+        <tr><td>Blynk Mobile App</td><td>Mobile IoT app for remote device control and monitoring</td><td>Enables user control over feeding times and monitor status</td></tr>
+        <tr><td>Power Supply</td><td>Battery or adapter providing sufficient power to ESP32 and servo</td><td>Keeps the system powered continuously</td></tr>
+        <tr><td>Jumper Wires & Connectors</td><td>Electrical connections between ESP32 and servo motor</td><td>Facilitates signal and power transmission</td></tr>
+      </table>
+
+      <h2>How it Works</h2>
+      <p><b>Setup:</b> The food container and tray are mounted on a wooden stand with the servo motor attached to the container lid mechanism.</p>
+      <p><b>Control:</b> The servo motor’s signal pin is connected to a GPIO pin on the ESP32. Power and ground connections complete the circuit.</p>
+      <p><b>Firmware:</b> The ESP32 is flashed with Arduino code to connect to WiFi and the Blynk cloud platform. It listens for commands from the Blynk app to operate the servo.</p>
+
+      <h3>Feeding Operation:</h3>
+      <ul>
+        <li>The user remotely opens the Blynk app and either triggers feed manually or sets a timer for scheduled feeding.</li>
+        <li>At command, the ESP32 activates the servo motor to rotate, lifting or sliding the lid open momentarily, allowing food to drop into the tray.</li>
+        <li>The motor then returns the lid to the closed position to prevent spillage or contamination.</li>
+      </ul>
+
+      <p><b>Notifications:</b> The Blynk app receives feedback about feeding status and alerts the user if any fault occurs or feeding is complete.</p>
+      <p><b>Schedule and Control:</b> Users can customize feeding schedules, portion sizes (by adjusting servo rotation time), and receive usage logs in realtime.</p>
+
+      <h2>Benefits</h2>
+      <ul>
+        <li>Enables pet feeding from anywhere with internet access.</li>
+        <li>Scheduled automated feeding avoids missed meals.</li>
+        <li>Portion control prevents overfeeding.</li>
+        <li>Real-time notifications ensure pet is fed safely.</li>
+        <li>Simple mechanical setup with widely available components.</li>
+        <li>Scalable to multiple feeding times or integration with sensors.</li>
+      </ul>
+
+      <p class="summary">This IoT pet feeder powered by ESP32 and controlled by the Blynk platform provides a reliable, convenient, and caring solution for modern pet owners to manage feeding remotely and efficiently.</p>
+    </div>
+
+    <a href="index.html#projects" class="back-btn">← Back to Projects</a>
+  </main>
+</body>
+</html>

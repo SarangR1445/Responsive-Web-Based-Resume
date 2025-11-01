@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IoT-Based Soil Moisture and Temperature Sensor — Project Details</title>
+  <link rel="stylesheet" href="project6.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="logo">
+      <div class="logo-mark">SR</div>
+      <div class="logo-text">
+        <h1>SARANG REWATKAR</h1>
+        <p class="role">IoT & Embedded Systems Engineer</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="fade-in">
+    <a href="index.html#projects" class="back-btn">← Back to Projects</a>
+    <div class="project-header">
+      <h1>IoT-Based Soil Moisture and Temperature Sensor</h1>
+      <p class="meta">Smart Real-Time Soil Monitoring System</p>
+    </div>
+
+    <div class="video-container">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/nh5x_H_lIko?si=3JjiL7F-1fJphvT9" 
+      title="YouTube video player" frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <div class="project-section">
+      <p>This project involves the development of an IoT-based system to monitor soil moisture and temperature levels in real-time. The system helps farmers and environmental managers optimize irrigation schedules and better manage plant health by providing accurate and timely data through wireless communication and cloud integration.</p>
+
+      <h2>Project Overview</h2>
+      <p>The system consists of sensor nodes that measure soil moisture and temperature, a microcontroller for data processing, and wireless modules to transmit data to a cloud platform. Users can remotely monitor soil conditions via a web or mobile interface, enabling efficient irrigation and sustainable agricultural practices.</p>
+
+      <h2>Working</h2>
+      <ul>
+        <li><b>Sensor Data Acquisition:</b> Soil moisture and temperature sensors continuously measure the soil at regular intervals.</li>
+        <li><b>Data Conversion:</b> Analog sensor signals are converted to digital data by a microcontroller (e.g., Arduino).</li>
+        <li><b>Connectivity:</b> The microcontroller connects to the internet using Wi-Fi for data transmission.</li>
+        <li><b>Data Transmission:</b> Sensor data is sent to a cloud platform, often in structured formats like JSON or MQTT.</li>
+        <li><b>Cloud Platform Integration:</b> The data is stored securely on the cloud platform for analysis and retrieval.</li>
+        <li><b>Data Processing and Analysis:</b> The cloud analyzes trends, calculates averages, generates alerts based on thresholds, and provides insights.</li>
+        <li><b>Storage and Retrieval:</b> Data is stored for historical analysis and accessible via APIs.</li>
+        <li><b>User Interface and Visualization:</b> Users interact with dashboards or apps to view real-time data, trends, and configure alerts.</li>
+        <li><b>User Interaction and Control:</b> Users can manage irrigation schedules and receive notifications based on soil condition.</li>
+      </ul>
+
+      <h2>Components and Software Requirements</h2>
+      <ul>
+        <li><b>IDE:</b> Arduino IDE for uploading code</li>
+        <li><b>Cloud:</b> ThingSpeak Server for viewing results on PC, laptops, and mobiles.</li>
+      </ul>
+
+      <h2>Hardware Components</h2>
+      <ul>
+        <li>Capacitive Soil Moisture Sensor</li>
+        <li>DS18B20 Waterproof Temperature Sensor</li>
+        <li>RS485 MODBUS Module</li>
+        <li>Arduino Nano Microcontroller</li>
+        <li>ESP32 Wi-Fi Module</li>
+        <li>NRF24L01 Wireless Transceiver Module</li>
+      </ul>
+
+      <h2>Component Brief</h2>
+      <p><b>Capacitive Soil Moisture Sensor:</b> Measures soil moisture by capacitive sensing, providing voltage output proportional to water content. It is corrosion-resistant for long service life.</p>
+      <p><b>DS18B20 Temperature Sensor:</b> Waterproof sensor measuring temperatures from -55°C to 125°C with high accuracy.</p>
+      <p><b>NRF24L01 Wireless Module:</b> 2.4 GHz transceiver for sending and receiving data wirelessly, with ranges up to 1000 meters using PA+LNA versions.</p>
+      <p><b>RS485 MODBUS Module:</b> Communication protocol for master-slave messaging over networks with RS-485 interfaces.</p>
+      <p><b>ESP32 Wi-Fi Module:</b> A low-cost SoC microcontroller with integrated Wi-Fi and Bluetooth.</p>
+      <p><b>Arduino Nano:</b> Compact microcontroller board based on ATmega328P, programmed via Arduino IDE.</p>
+
+      <h2>Societal Impact</h2>
+      <ul>
+        <li>Enables optimized irrigation and water resource conservation.</li>
+        <li>Improves agricultural productivity and sustainability.</li>
+        <li>Reduces environmental impact through better water management.</li>
+        <li>Supports economic growth of farming communities.</li>
+        <li>Aids climate change resilience through smarter farming practices.</li>
+      </ul>
+
+      <h2>Applications</h2>
+      <ul>
+        <li>Precision agriculture and farming</li>
+        <li>Greenhouse and horticulture management</li>
+        <li>Landscaping and turf maintenance</li>
+        <li>Environmental monitoring and research</li>
+        <li>Water resource management</li>
+        <li>Smart irrigation systems</li>
+        <li>Urban planning and green infrastructure</li>
+        <li>Educational and research tools</li>
+      </ul>
+
+      <h2>Future Scope</h2>
+      <ul>
+        <li>Improved sensor accuracy and reliability.</li>
+        <li>Integration with AI and machine learning for predictive analytics.</li>
+        <li>Deployment of wireless sensor networks on a large scale.</li>
+        <li>Use of energy harvesting to extend sensor life.</li>
+        <li>Closer integration with irrigation and precision agriculture technologies.</li>
+        <li>Combination with satellite and remote sensing data.</li>
+        <li>Advanced data analytics and decision support systems.</li>
+        <li>Incorporation into smart city initiatives for sustainable urban green spaces.</li>
+      </ul>
+
+      <h2>References</h2>
+      <p>YouTube video: <a href="https://youtu.be/nh5x_H_lIko" target="_blank">https://youtu.be/nh5x_H_lIko</a></p>
+      <p>Project and component details: <a href="https://how2electronics.com/iot-based-soil-nutrient-monitoring-with-arduino-esp32/" target="_blank">https://how2electronics.com/iot-based-soil-nutrient-monitoring-with-arduino-esp32/</a></p>
+    </div>
+
+    <a href="index.html#projects" class="back-btn">← Back to Projects</a>
+  </main>
+</body>
+</html>
